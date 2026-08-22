@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"><title>Destek Merkezi · Pompala</title><style>
+:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#ecf8ff;background:#073863}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(#2c8bd5,#073863);min-height:100vh}
+main{max-width:760px;margin:auto;padding:32px 20px 60px}
+.brand{color:#fff;text-decoration:none;font-weight:800;font-size:20px}
+h1{font-size:34px;margin:25px 0 5px}
+h2{font-size:18px;margin:28px 0 8px}
+p{color:#d9edf9;line-height:1.65}
+.updated{font-size:12px;opacity:.75}
+.links{display:grid;gap:10px;margin-top:25px}
+.links a{color:#fff;background:#ffffff18;border:1px solid #ffffff30;border-radius:14px;padding:14px;text-decoration:none}
+form{display:grid;gap:14px;background:#052d55aa;border:1px solid #ffffff2a;border-radius:20px;padding:18px;margin:24px 0}
+label{display:grid;gap:7px;font-size:13px;font-weight:700}
+input,textarea,select{width:100%;border:1px solid #ffffff30;border-radius:12px;background:#041e3c;color:#fff;padding:12px;font:inherit}
+textarea{min-height:130px}
+button{border:0;border-radius:13px;padding:14px;background:#fff;color:#073863;font-weight:800;cursor:pointer}
+.danger{background:#f0445a;color:#fff}
+.hp{display:none}
+footer{margin-top:42px;padding-top:22px;border-top:1px solid #ffffff25;color:#cfe7f6;font-size:12px;line-height:1.8}
+footer a,a{color:#fff}
+.notice{background:#ffffff12;border:1px solid #ffffff22;border-radius:18px;padding:16px;margin-top:22px}
+</style></head>
+<body><main><a class="brand" href="index.html">Pompala</a><h1>Destek Merkezi</h1>
+<p class="updated">Son güncelleme: 22 Ağustos 2026</p>
+<p>Teknik destek, moderasyon, gizlilik veya hesap silme talebini aşağıdaki formdan iletebilirsin.</p>
+<form id="support">
+<label>E-posta (isteğe bağlı)<input name="email" type="email" maxlength="254"></label>
+<label>Konu<select name="category">
+<option value="support">Teknik destek</option>
+<option value="moderation">Moderasyon</option>
+<option value="privacy">Gizlilik</option>
+<option value="account_deletion">Hesap silme</option>
+<option value="other">Diğer</option>
+</select></label>
+<label>Mesaj<textarea name="message" minlength="10" maxlength="1000" required></textarea></label>
+<input class="hp" name="website" tabindex="-1" autocomplete="off">
+<button>Gönder</button>
+<p id="result"></p>
+</form>
+<script>
+document.getElementById('support').onsubmit=async(e)=>{
+ e.preventDefault();
+ const f=new FormData(e.target), rEl=document.getElementById('result');
+ rEl.textContent='Gönderiliyor...';
+ try {
+   const r=await fetch('https://ywmbmfjirdabweyhikui.supabase.co/functions/v1/public-pages',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({
+     action:'support',email:f.get('email'),category:f.get('category'),message:f.get('message'),website:f.get('website')
+   })});
+   rEl.textContent=r.ok?'Talebin alındı.':'Talep gönderilemedi.';
+   if(r.ok)e.target.reset();
+ } catch (_) { rEl.textContent='Talep gönderilemedi.'; }
+};
+</script>
+
+<footer>© 2026 Pompala · <a href="privacy.html">Gizlilik</a> · <a href="terms.html">Koşullar</a> · <a href="community.html">Topluluk</a> · <a href="support.html">Destek</a> · <a href="account-deletion.html">Hesap Silme</a></footer>
+</main></body></html>
