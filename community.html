@@ -1,40 +1,196 @@
 <!doctype html>
-<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index,follow"><title>Topluluk Kuralları · Pompala</title><style>
-:root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#ecf8ff;background:#073863}
-*{box-sizing:border-box}
-body{margin:0;background:linear-gradient(#2c8bd5,#073863);min-height:100vh}
-main{max-width:760px;margin:auto;padding:32px 20px 60px}
-.brand{color:#fff;text-decoration:none;font-weight:800;font-size:20px}
-h1{font-size:34px;margin:25px 0 5px}
-h2{font-size:18px;margin:28px 0 8px}
-p{color:#d9edf9;line-height:1.65}
-.updated{font-size:12px;opacity:.75}
-.links{display:grid;gap:10px;margin-top:25px}
-.links a{color:#fff;background:#ffffff18;border:1px solid #ffffff30;border-radius:14px;padding:14px;text-decoration:none}
-form{display:grid;gap:14px;background:#052d55aa;border:1px solid #ffffff2a;border-radius:20px;padding:18px;margin:24px 0}
-label{display:grid;gap:7px;font-size:13px;font-weight:700}
-input,textarea,select{width:100%;border:1px solid #ffffff30;border-radius:12px;background:#041e3c;color:#fff;padding:12px;font:inherit}
-textarea{min-height:130px}
-button{border:0;border-radius:13px;padding:14px;background:#fff;color:#073863;font-weight:800;cursor:pointer}
-.danger{background:#f0445a;color:#fff}
-.hp{display:none}
-footer{margin-top:42px;padding-top:22px;border-top:1px solid #ffffff25;color:#cfe7f6;font-size:12px;line-height:1.8}
-footer a,a{color:#fff}
-.notice{background:#ffffff12;border:1px solid #ffffff22;border-radius:18px;padding:16px;margin-top:22px}
-</style></head>
-<body><main><a class="brand" href="index.html">Pompala</a><h1>Topluluk Kuralları</h1>
-<p class="updated">Son güncelleme: 22 Ağustos 2026</p>
-<h2>1. Saygılı davran</h2>
-<p>Taciz, zorbalık, hedef gösterme, tehdit ve nefret söylemine izin verilmez.</p>
-<h2>2. Güvenli içerik paylaş</h2>
-<p>Cinsel sömürü, çocukların cinsel istismarı, ağır şiddet tehdidi, yasa dışı faaliyet yönlendirmeleri ve başkalarının özel kişisel bilgilerini paylaşmak yasaktır.</p>
-<h2>3. Spam ve manipülasyon yapma</h2>
-<p>Bot, otomatik pompalama, sahte hesap ağları, yanıltıcı bağlantılar ve sıralamayı yapay biçimde manipüle etmeye yönelik davranışlara izin verilmez.</p>
-<h2>4. Şikâyet ve engelleme</h2>
-<p>Bir balonun seçeneklerinden içeriği şikâyet edebilir veya kullanıcıyı engelleyebilirsin. Profil seçeneklerinden de kullanıcı şikâyeti/engeli yapılabilir. Engellenen kullanıcılarla karşılıklı içerik ve etkileşim kısıtlanır.</p>
-<h2>5. Yaptırım</h2>
-<p>Şikâyetler moderasyon kuyruğunda incelenir. Gerekli görüldüğünde içerik kaldırılabilir, hesap kısıtlanabilir veya silinebilir.</p>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Pompala topluluk kuralları ve çocuk güvenliği standartları.">
+  <title>Topluluk Kuralları ve Çocuk Güvenliği · Pompala</title>
 
-<footer>© 2026 Pompala · <a href="privacy.html">Gizlilik</a> · <a href="terms.html">Koşullar</a> · <a href="community.html">Topluluk</a> · <a href="support.html">Destek</a> · <a href="account-deletion.html">Hesap Silme</a></footer>
-</main></body></html>
+  <style>
+    :root {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #ecf8ff;
+      background: #073863;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(#2c8bd5, #073863);
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: 32px 20px 60px;
+    }
+
+    .brand {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 25px 0 5px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin: 28px 0 8px;
+    }
+
+    p {
+      color: #d9edf9;
+      line-height: 1.65;
+    }
+
+    .updated {
+      font-size: 12px;
+      opacity: .75;
+    }
+
+    .notice {
+      background: #ffffff12;
+      border: 1px solid #ffffff22;
+      border-radius: 18px;
+      padding: 16px;
+      margin-top: 22px;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 22px;
+      border-top: 1px solid #ffffff25;
+      color: #cfe7f6;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    footer a,
+    a {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a class="brand" href="index.html">Pompala</a>
+
+    <h1>Topluluk Kuralları</h1>
+    <p class="updated">Son güncelleme: 15 Eylül 2026</p>
+
+    <h2>1. Saygılı davran</h2>
+    <p>
+      Taciz, zorbalık, hedef gösterme, tehdit ve nefret söylemine izin verilmez.
+      Başkalarının güvenliğini veya uygulamayı özgürce kullanmasını engelleyen
+      davranışlar topluluk kurallarının ihlali olarak değerlendirilir.
+    </p>
+
+    <h2>2. Güvenli içerik paylaş</h2>
+    <p>
+      Cinsel sömürü, çocukların cinsel istismarı, ağır şiddet tehdidi, yasa dışı
+      faaliyet yönlendirmeleri ve başkalarının özel kişisel bilgilerini izinsiz
+      paylaşmak yasaktır.
+    </p>
+
+    <h2>3. Spam ve manipülasyon yapma</h2>
+    <p>
+      Bot, otomatik pompalama, sahte hesap ağları, yanıltıcı bağlantılar ve
+      sıralamayı yapay biçimde manipüle etmeye yönelik davranışlara izin verilmez.
+    </p>
+
+    <h2>4. Şikâyet ve engelleme</h2>
+    <p>
+      Bir balonun seçeneklerinden içeriği şikâyet edebilir veya kullanıcıyı
+      engelleyebilirsin. Profil seçeneklerinden de kullanıcı şikâyeti ve engelleme
+      işlemi yapılabilir. Engellenen kullanıcılarla karşılıklı içerik ve etkileşim
+      kısıtlanır.
+    </p>
+
+    <h2>5. Yaptırım</h2>
+    <p>
+      Şikâyetler moderasyon kapsamında incelenir. Gerekli görüldüğünde içerik
+      kaldırılabilir, görünürlüğü kısıtlanabilir veya ilgili hesap geçici ya da
+      kalıcı olarak kapatılabilir.
+    </p>
+
+    <div class="notice">
+      <h2>6. Çocuk güvenliği ve sıfır tolerans</h2>
+      <p>
+        Pompala yalnızca 18 yaş ve üzerindeki kullanıcılar içindir. Bununla
+        birlikte Pompala; çocukların cinsel istismarı ve sömürüsüne
+        (Child Sexual Abuse and Exploitation – CSAE) ve çocukların cinsel
+        istismarı niteliğindeki materyallere (Child Sexual Abuse Material – CSAM)
+        karşı sıfır tolerans politikası uygular.
+      </p>
+
+      <p>
+        Çocukları cinselleştiren, istismar eden, sömüren, cinsel amaçlarla
+        hedefleyen, çocuklarla uygunsuz iletişim kurulmasını teşvik eden veya
+        çocuklara yönelik cinsel istismar materyali içeren hiçbir içerik ya da
+        davranışa izin verilmez.
+      </p>
+    </div>
+
+    <h2>7. Çocuk güvenliği ihlallerinin bildirilmesi</h2>
+    <p>
+      Kullanıcılar, bir balonun veya kullanıcı profilinin seçenekler menüsündeki
+      şikâyet özelliğini kullanarak çocuk güvenliğiyle ilgili içerikleri ve
+      hesapları doğrudan uygulama içinden bildirebilir.
+    </p>
+
+    <p>
+      Çocuk güvenliğiyle ilgili bildirimler ayrıca
+      <a href="mailto:pompalaappsupport@gmail.com">
+        pompalaappsupport@gmail.com
+      </a>
+      adresine gönderilebilir.
+    </p>
+
+    <h2>8. İnceleme ve uygulanabilecek işlemler</h2>
+    <p>
+      Çocuk güvenliğiyle ilgili bildirimler incelenir. CSAE veya CSAM kapsamına
+      giren içerikler tespit edildiğinde içerik kaldırılabilir; ilgili hesap
+      kısıtlanabilir, askıya alınabilir veya kalıcı olarak kapatılabilir.
+      Güvenlik ve yasal yükümlülüklerin yerine getirilmesi için gerekli kayıtlar,
+      geçerli mevzuata uygun şekilde korunabilir.
+    </p>
+
+    <h2>9. Yetkili kurumlarla iş birliği</h2>
+    <p>
+      Pompala, çocukların güvenliğiyle ilgili yürürlükteki bölgesel, ulusal ve
+      uluslararası yasalara uyar. Çocukların cinsel istismarı veya CSAM şüphesi
+      tespit edildiğinde, geçerli mevzuatın gerektirdiği durumlarda ilgili bilgiler
+      yetkili ulusal veya bölgesel kurumlara bildirilir. Yetkili makamların hukuka
+      uygun talepleriyle iş birliği yapılır.
+    </p>
+
+    <h2>10. Çocuk güvenliği iletişim noktası</h2>
+    <p>
+      Çocuk güvenliği, CSAE, CSAM veya bu standartların uygulanmasıyla ilgili
+      bildirim ve sorular için belirlenmiş iletişim adresimiz:
+      <a href="mailto:pompalaappsupport@gmail.com">
+        pompalaappsupport@gmail.com
+      </a>
+    </p>
+
+    <footer>
+      © 2026 Pompala ·
+      <a href="privacy.html">Gizlilik</a> ·
+      <a href="terms.html">Koşullar</a> ·
+      <a href="community.html">Topluluk</a> ·
+      <a href="support.html">Destek</a> ·
+      <a href="account-deletion.html">Hesap Silme</a>
+    </footer>
+  </main>
+</body>
+</html>
